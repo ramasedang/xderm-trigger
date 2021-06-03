@@ -25,9 +25,11 @@ int main(void)
     if(res == CURLE_OK) {
       /* Connection available */
 #ifndef DEBUG
-      system("cd /www/xderm/");
-      system("./xderm-mini stop");
-      system("./xderm-mini start");
+      system("/root/login");
+      system("/root/rekonek");
+      system("ifup wan");
+	    system("/root/sleep");
+	    system("/etc/config/shadowsocksr restart");
 #else
       printf("HTTP OK");
 #endif
