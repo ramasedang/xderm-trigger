@@ -25,11 +25,7 @@ int main(void)
     if(res == CURLE_OK) {
       /* Connection available */
 #ifndef DEBUG
-      system("/root/login");
-      system("/root/rekonek");
-      system("ifup wan");
-	    system("/root/sleep");
-	    system("/etc/config/shadowsocksr restart");
+      printf("test");
 #else
       printf("HTTP OK");
 #endif
